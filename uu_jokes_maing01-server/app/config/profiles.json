@@ -1,0 +1,39 @@
+{
+  "{asid}": {
+    "profileList": ["AsidAuthorities", "AsidExecutives", "AsidLicenseOwner", "Public"],
+    "useCaseMap": {
+    }
+  },
+  "*": {
+    "profileList": ["Authorities", "Executives", "AwidLicenseOwner", "Public"],
+    "useCaseMap": {
+      "sys/uuSubAppInstance/init": {
+        "sysStateList": ["active"],
+        "profileList": ["AwidLicenseOwner"]
+      },
+      "sys/uuAppWorkspace/init": {
+        "sysStateList": ["created"],
+        "profileList": ["AwidLicenseOwner"]
+      },
+      "defaultUve": {
+        "profileList": ["Public"]
+      },
+      "sys/uuAppWorkspace/initUve": {
+        "sysStateList": ["created"],
+        "profileList": ["Public", "AwidLicenseOwner"]
+      },
+      "joke/create":{
+        "sysStateList": ["active"],
+        "profileList": ["Authorities"]
+      },
+      "joke/get":{
+        "sysStateList": ["active"],
+        "profileList": ["Authorities"]
+      },
+      "joke/getImageData": {
+        "sysStateList": ["active"],
+        "profileList": ["Public"]
+      }      
+    }
+  }
+}
